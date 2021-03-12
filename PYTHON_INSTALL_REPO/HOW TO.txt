@@ -1,0 +1,23 @@
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                                                           *
+*   HOW TO INSTALL PARAMIKO PACKAGE ON WINDOWS              *
+*                                                           *
+*                                                           *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+---PRELIMINARY INFORMATIONS---
+SG network does not allow to run pip or easy_install from normal workstation (issue whe authenticating through the proxy).
+To go around this limitation this How To file explain how to install the required packages to be able to use the paramiko.
+library on your workstation. paramiko is a python library which is a prerequisite to connect by SSH to network device (leveraging on OpenSSH).
+
+whl = wheel files are precompiled librairy that can directly be installed using the pip tool. The paramiko librairy pre-requisite are pycrypto
+and ecdsa liberairy. Make sur to install them in this given order to avoid getting installation error messages.
+
+---REQUIRED FILES---
+- pycrypto-2.7a1-cp35-none-win32.whl: pycrypto wheel file for 32 bits platform
+- ecdsa-0.13-py2.py3-none-any.whl:   ecdsa wheel file for 32 bits platform
+- paramiko-1.13.3-py2.py3-none-any.whl: paramiko wheel file for 32 bits platform
+
+---REMARK---
+The wheel files provided are for 32 bits platform which as of end of 2016 is the NDG workstation standard at SG.
+The python version used to make the package work is python 3.5

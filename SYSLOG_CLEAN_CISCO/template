@@ -1,0 +1,3 @@
+###LOGGING CONFIG###
+logging buffer 512000
+logging host ABCD
